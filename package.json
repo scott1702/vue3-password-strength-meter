@@ -1,6 +1,6 @@
 {
   "name": "vue3-password-strength-meter",
-  "version": "1.7.5",
+  "version": "1.7.6",
   "private": false,
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.0",
@@ -71,10 +71,7 @@
     "zxcvbn": "^4.4.2"
   },
   "description": "Interactive password strength meter based on zxcvbn",
-  "author": {
-    "name": "Ahmad Sharif",
-    "email": "ahmad.sharif@live.com"
-  },
+  "author": "Ahmad Sharif <ahmad.sharif@live.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -121,11 +118,13 @@
       "webpack-merge"
     ]
   },
-  "readme": "ERROR: No README data found!",
   "homepage": "https://github.com/Asharif88/vue3-password-strength-meter#readme",
-  "_id": "vue3-password-strength-meter@1.7.5",
   "dependencies": {
     "babel-preset-env": "^1.7.0",
     "webpack-cli": "^4.0.0"
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "test"
   }
 }

@@ -1,8 +1,6 @@
 # 🔓 vue3-password-strength-meter
 
-[![Build Status](https://travis-ci.org/apertureless/vue-password-strength-meter.svg?branch=master)](https://travis-ci.org/apertureless/vue-password-strength-meter)
-[![npm version](https://badge.fury.io/js/vue-password-strength-meter.svg)](https://badge.fury.io/js/vue-password-strength-meter)
-[![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
+
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/apertureless/vue-password-strength-meter/blob/master/LICENSE.txt)
 
 Interactive password strength meter based on [zxcvbn](https://github.com/dropbox/zxcvbn) for vue.js
@@ -10,10 +8,6 @@ Interactive password strength meter based on [zxcvbn](https://github.com/dropbox
 <p align="center">
   <img src="/static/demo.gif" alt="🔓" title="🔓 Demo" />
 </p>
-
-## 📺 Demo
-
-(https://apertureless.github.io/vue-password-strength-meter/)
 
 ## 🔧 Install
 
@@ -28,7 +22,7 @@ Interactive password strength meter based on [zxcvbn](https://github.com/dropbox
 </template>
 
 <script>
-  import Password from 'vue-password-strength-meter'
+  import Password from 'vue3-password-strength-meter'
   export default {
     components: { Password },
     data: () => ({
@@ -82,7 +76,7 @@ Interactive password strength meter based on [zxcvbn](https://github.com/dropbox
 </template>
 
 <script>
-  import Password from 'vue-password-strength-meter'
+  import Password from 'vue3-password-strength-meter'
   export default {
     components: { Password },
     data: () => ({
