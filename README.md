@@ -46,7 +46,7 @@ Interactive password strength meter based on [zxcvbn](https://github.com/dropbox
 </template>
 
 <script>
-  import Password from 'vue-password-strength-meter'
+  import Password from 'vue3-password-strength-meter'
   export default {
     components: { Password },
     data: () => ({

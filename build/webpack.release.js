@@ -10,7 +10,7 @@ var projectRoot = path.resolve(__dirname, '../')
 
 module.exports = {
   entry: {
-    'vue-password-strength-meter': './src/index.js'
+    'vue3-password-strength-meter': './src/index.js'
   },
   output: {
     filename: './dist/[name].js',

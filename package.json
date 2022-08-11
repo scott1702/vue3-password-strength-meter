@@ -1,6 +1,6 @@
 {
   "name": "vue3-password-strength-meter",
-  "version": "1.7.6",
+  "version": "1.7.7",
   "private": false,
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.0",
