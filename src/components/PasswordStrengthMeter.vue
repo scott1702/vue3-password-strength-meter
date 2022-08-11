@@ -9,7 +9,7 @@
         :type="inputType"
         :ref="referenceValue"
         :class="[defaultClass, $attrs.disabled ? disabledClass : '']"
-        :value="value"
+        :value="modelValue"
         @input="evt => emitValue('input', evt.target.value)"
         @blur="evt => emitValue('blur', evt.target.value)"
         @focus="evt => emitValue('focus', evt.target.value)"
@@ -57,6 +57,7 @@
   export default {
     name: 'VuePasswordStrengthMeter',
     inheritAttrs: false,
+    emits: ['input', 'blur', 'focus', 'score', 'hide', 'show', 'update:modelValue', 'feedback'],
     props: {
       /**
        * Binded value
@@ -65,6 +66,9 @@
       value: {
         type: String
       },
+        modelValue: {
+            type: String
+        },
       /**
        * Password min length.
        * Right now only visual for the badge
@@ -226,10 +230,15 @@
           this.$data._showPassword = true
         }
       },
-      emitValue (type, value) {
-        this.$emit(type, value)
-        this.password = value
-      }
+        emitValue (type, value) {
+            if (type == 'input') {
+                this.$emit('update:modelValue', value) // Changed in Vue 3
+            }
+            else {
+                this.$emit(type, value)
+            }
+            this.password = value
+        }
     },
 
     computed: {
@@ -281,7 +290,7 @@
     },
 
     watch: {
-      value (newValue) {
+        modelValue (newValue) {
         if (this.strengthMeterOnly) {
           this.emitValue('input', newValue)
         }
