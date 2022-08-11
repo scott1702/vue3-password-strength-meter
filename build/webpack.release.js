@@ -1,4 +1,5 @@
 var vue = require('vue-loader')
+const { VueLoaderPlugin } = require('vue-loader')
 var path = require('path')
 var config = require('../config')
 var utils = require('./utils')
@@ -21,44 +22,33 @@ module.exports = {
     'zxcvbn': 'zxcvbn'
   },
   module: {
-    preLoaders: [
+    rules: [
       {
         test: /\.vue$/,
-        loader: 'eslint',
-        include: projectRoot,
-        exclude: /node_modules/
+        loader: 'vue-loader'
       },
       {
         test: /\.js$/,
-        loader: 'eslint',
-        include: projectRoot,
-        exclude: /node_modules/
-      }
-    ],
-    loaders: [
-      {
-        test: /\.vue$/,
-        loader: 'vue'
+        loader: 'babel-loader',
+        exclude: file => (
+            /node_modules/.test(file) &&
+            !/\.vue\.js/.test(file)
+        )
       },
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel'
+        test: /\.scss$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
       }
     ]
   },
-  eslint: {
-    formatter: require('eslint-friendly-formatter')
-  },
-  vue: {
-    loaders: utils.cssLoaders({
-      sourceMap: config.build.productionSourceMap
-    })
-  },
-  babel: {
-    presets: ['es2015'],
-    plugins: ['transform-runtime']
-  }
+  plugins: [
+    //make sure to include the plugin for the magic
+    new VueLoaderPlugin()
+  ],
 }
 
 if (process.env.NODE_ENV === 'production') {
@@ -70,12 +60,13 @@ if (process.env.NODE_ENV === 'production') {
         NODE_ENV: '"production"'
       }
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
-    }),
-    new webpack.optimize.OccurenceOrderPlugin()
+    // new webpack.optimize.UglifyJsPlugin({
+    //   compress: {
+    //     warnings: false
+    //   }
+    // }),
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new VueLoaderPlugin()
     // new ExtractTextPlugin(utils.assetsPath('css/[name].[contenthash].css')),
   ]
 }

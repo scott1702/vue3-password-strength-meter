@@ -1,5 +1,6 @@
 var path = require('path')
 var config = require('../config')
+const { VueLoaderPlugin } = require('vue-loader')
 var utils = require('./utils')
 var projectRoot = path.resolve(__dirname, '../')
 
@@ -33,24 +34,10 @@ module.exports = {
     fallback: [path.join(__dirname, '../node_modules')]
   },
   module: {
-    preLoaders: [
-      {
-        test: /\.vue$/,
-        loader: 'eslint',
-        include: projectRoot,
-        exclude: /node_modules/
-      },
-      {
-        test: /\.js$/,
-        loader: 'eslint',
-        include: projectRoot,
-        exclude: /node_modules/
-      }
-    ],
     loaders: [
       {
         test: /\.vue$/,
-        loader: 'vue'
+        loader: 'vue-loader',
       },
       {
         test: /\.js$/,
@@ -90,5 +77,8 @@ module.exports = {
         browsers: ['last 2 versions']
       })
     ]
-  }
+  },
+    plugins: [
+    new VueLoaderPlugin()
+    ]
 }

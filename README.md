@@ -1,11 +1,9 @@
-# 🔓 vue-password-strength-meter
+# 🔓 vue3-password-strength-meter
 
 [![Build Status](https://travis-ci.org/apertureless/vue-password-strength-meter.svg?branch=master)](https://travis-ci.org/apertureless/vue-password-strength-meter)
 [![npm version](https://badge.fury.io/js/vue-password-strength-meter.svg)](https://badge.fury.io/js/vue-password-strength-meter)
 [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/apertureless/vue-password-strength-meter/blob/master/LICENSE.txt)
-
-[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/C0C1WP7C)
 
 Interactive password strength meter based on [zxcvbn](https://github.com/dropbox/zxcvbn) for vue.js
 
@@ -15,11 +13,11 @@ Interactive password strength meter based on [zxcvbn](https://github.com/dropbox
 
 ## 📺 Demo
 
-[Demo here](https://apertureless.github.io/vue-password-strength-meter/)
+(https://apertureless.github.io/vue-password-strength-meter/)
 
 ## 🔧 Install
 
-`yarn add vue-password-strength-meter zxcvbn`
+`npm install vue3-password-strength-meter zxcvbn`
 
 ## 👈 Usage
 
@@ -150,7 +148,3 @@ npm test
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-
-## Support
-
-<a href="https://www.buymeacoffee.com/xcqjaytbl" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/purple_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
