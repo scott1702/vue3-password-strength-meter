@@ -7,7 +7,6 @@
       <input
         v-bind="$attrs"
         :type="inputType"
-        :ref="referenceValue"
         :class="[defaultClass, $attrs.disabled ? disabledClass : '']"
         :value="modelValue"
         @input="evt => emitValue('input', evt.target.value)"
@@ -106,14 +105,6 @@ export default {
     showPassword: {
       type: Boolean,
       default: false
-    },
-    /**
-     * Prop to change the
-     * ref of the input
-     */
-    referenceValue: {
-      type: String,
-      default: 'input'
     },
     /**
      * Prop to toggle the

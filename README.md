@@ -104,7 +104,6 @@ Interactive password strength meter based on [zxcvbn](https://github.com/dropbox
 | labelHide |  String | 'Hide Password' | Label for the hide icon
 | labelShow |  String | 'Show Password' | Label for the show icon
 | userInputs | Array | empty array | Array of strings that zxcvbn will treat as an extra dictionary
-| referenceValue | String | 'input' | Prop to change the `ref` of the input. This way you can have the input outside of the component.
 
 ## Events
 
