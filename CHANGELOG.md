@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.7.9]
+
+* Fix for main & browser entry points missed a nested level of dist folder
+
 ### [1.7.8]
 
 * Removed option referenceValue that was causing a reference error in production
